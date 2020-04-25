@@ -377,6 +377,37 @@
 		return FALSE
 	return TRUE
 
+/datum/antagonist/gang/phantom_thieves
+	name = "Phantom Thief"
+	roundend_category = "The Phantom Thieves of Hearts"
+	gang_name = "Phantom Thieves of Hearts"
+	gang_id = "PTH"
+	acceptable_clothes = list(/obj/item/clothing/head/soft/red,
+							/obj/item/clothing/neck/scarf/red,
+							/obj/item/clothing/under/suit/white,
+							/obj/item/clothing/head/beanie/red,
+							/obj/item/clothing/head/ushanka)
+	free_clothes = list(/obj/item/clothing/head/ushanka,
+						/obj/item/clothing/under/suit/white,
+						/obj/item/toy/crayon/spraycan)
+	gang_objective = "We need to get some supplies for the next calling card we intend to send out. Joker wants us to acquire some real, authentic hearts. One per member of the Phantom Thieves."
+	antag_hud_name = "PhantomThieves"
+
+/datum/antagonist/gang/russian_mafia/check_gang_objective()
+	var/datum/game_mode/gang/F = SSticker.mode
+	for(var/M in F.gangbangers)
+		var/datum/mind/MI = M
+		if(MI.has_antag_datum(src.type))
+			if(!considered_alive(MI.current))
+				continue // dead people cant really do the objective lol
+			var/list/items_to_check = MI.current.GetAllContents()
+			for(var/I in items_to_check)
+				var/obj/IT = I
+				if(istype(IT, /obj/item/reagent_containers/food/drinks/bottle))
+					continue
+			return FALSE // didnt pass the bottle check, no point in continuing to loop
+	return TRUE
+
 
 /datum/team/gang
 	var/points = 0
