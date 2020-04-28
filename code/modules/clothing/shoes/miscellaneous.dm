@@ -35,7 +35,7 @@
 /obj/item/clothing/shoes/combat/sneakboots/dropped(mob/living/carbon/human/user)
 	REMOVE_TRAIT(user, TRAIT_SILENT_FOOTSTEPS, SHOES_TRAIT)
 	return ..()
-	
+
 /obj/item/clothing/shoes/combat/swat //overpowered boots for death squads
 	name = "\improper SWAT boots"
 	desc = "High speed, no drag combat boots."
@@ -462,3 +462,15 @@
 	desc = "For when you're stepping on up to the plate."
 	icon_state = "JackFrostShoes"
 	item_state = "JackFrostShoes_worn"
+
+/obj/item/clothing/shoes/phantom
+	name = "phantom boots"
+	desc = "Great for getaways."
+	icon_state = "PhantomShoes"
+	item_state = "PhantomShoes"
+
+/obj/item/clothing/shoes/saints
+	name = "saints boots"
+	desc = "Perfect for patrolling the streets of Stilwater and Steelport."
+	icon_state = "saintShoes"
+	item_state = "saintShoes"

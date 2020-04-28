@@ -382,18 +382,37 @@
 	roundend_category = "The Phantom Thieves of Hearts"
 	gang_name = "Phantom Thieves of Hearts"
 	gang_id = "PTH"
-	acceptable_clothes = list(/obj/item/clothing/head/soft/red,
-							/obj/item/clothing/neck/scarf/red,
-							/obj/item/clothing/under/suit/white,
-							/obj/item/clothing/head/beanie/red,
-							/obj/item/clothing/head/ushanka)
-	free_clothes = list(/obj/item/clothing/head/ushanka,
-						/obj/item/clothing/under/suit/white,
+	acceptable_clothes = list(/obj/item/clothing/mask/gas/phantom,
+							/obj/item/clothing/under/costume/phantom,
+							/obj/item/clothing/suit/phantom,
+							/obj/item/clothing/shoes/phantom)
+	free_clothes = list(/obj/item/clothing/mask/gas/phantom,
+						/obj/item/clothing/under/costume/phantom,
+						/obj/item/clothing/suit/phantom,
+						/obj/item/clothing/shoes/phantom,
 						/obj/item/toy/crayon/spraycan)
 	gang_objective = "We need to get some supplies for the next calling card we intend to send out. Joker wants us to acquire some real, authentic hearts. One per member of the Phantom Thieves."
 	antag_hud_name = "PhantomThieves"
 
-/datum/antagonist/gang/russian_mafia/check_gang_objective()
+/datum/antagonist/gang/phantom_thieves
+	name = "Third Street Saint"
+	roundend_category = "the Third Street Saints"
+	gang_name = "Third Street Saints"
+	gang_id = "TSS"
+	acceptable_clothes = list(/obj/item/clothing/head/saints,
+							/obj/item/clothing/under/costume/saints,
+							/obj/item/clothing/suit/saints,
+							/obj/item/clothing/shoes/saints)
+	free_clothes = list(/obj/item/clothing/head/saints,
+						/obj/item/clothing/under/costume/saints,
+						/obj/item/clothing/suit/saints,
+						/obj/item/clothing/shoes/saints,
+						/obj/item/toy/crayon/spraycan)
+	gang_objective = "We need to get some supplies for the next calling card we intend to send out. Joker wants us to acquire some real, authentic hearts. One per member of the Phantom Thieves."
+	antag_hud_name = "ThirdStreetSaints"
+
+
+/datum/antagonist/gang/phantom_thieves/check_gang_objective()
 	var/datum/game_mode/gang/F = SSticker.mode
 	for(var/M in F.gangbangers)
 		var/datum/mind/MI = M
@@ -405,7 +424,7 @@
 				var/obj/IT = I
 				if(istype(IT, /obj/item/reagent_containers/food/drinks/bottle))
 					continue
-			return FALSE // didnt pass the bottle check, no point in continuing to loop
+			return FALSE // didnt pass the heart check, moving on
 	return TRUE
 
 

@@ -20,7 +20,7 @@ GLOBAL_VAR_INIT(deaths_during_shift, 0)
 	config_tag = "families"
 	antag_flag = ROLE_FAMILIES
 	false_report_weight = 5
-	required_players = 40
+	required_players = 10
 	required_enemies = 6
 	recommended_enemies = 6
 	announce_span = "danger"
@@ -132,6 +132,7 @@ GLOBAL_VAR_INIT(deaths_during_shift, 0)
 
 		for(var/C in ballas.free_clothes)
 			var/obj/O = new C(gangbanger.current)
+			O.armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 			var/list/slots = list (
 				"backpack" = ITEM_SLOT_BACKPACK,
 				"left pocket" = ITEM_SLOT_LPOCKET,

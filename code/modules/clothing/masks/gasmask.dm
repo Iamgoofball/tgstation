@@ -262,3 +262,9 @@
 	item_state = "hunter"
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	flags_inv = HIDEFACIALHAIR|HIDEFACE|HIDEEYES|HIDEEARS|HIDEHAIR
+
+/obj/item/clothing/mask/gas/phantom
+	name = "phantom thief mask"
+	desc = "Looking cool."
+	icon_state = "PhantomMask"
+	item_state = "PhantomMask"

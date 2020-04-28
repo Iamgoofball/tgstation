@@ -795,3 +795,17 @@
 	item_state = "DutchJacket"
 	body_parts_covered = ARMS
 
+/obj/item/clothing/suit/phantom
+	name = "phantom thief coat"
+	desc = "Looks stylish when doing flips."
+	icon_state = "PhantomJacket"
+	item_state = "PhantomJacket"
+	body_parts_covered = ARMS
+
+/obj/item/clothing/suit/saints
+	name = "saints jacket"
+	desc = "Gotta keep yourself warm on cold, cold nights."
+	icon_state = "saintCoat"
+	item_state = "saintCoat"
+	body_parts_covered = ARMS
+

@@ -274,3 +274,17 @@
 	icon_state = "DutchUniform"
 	item_state = "DutchUniform"
 	can_adjust = FALSE
+
+/obj/item/clothing/under/costume/phantom
+	name = "phantom thief dress shirt"
+	desc = "Whoa! Lookin' cool!"
+	icon_state = "PhantomUniform"
+	item_state = "PhantomUniform"
+	can_adjust = FALSE
+
+/obj/item/clothing/under/costume/saints
+	name = "saints uniform"
+	desc = "Third Street Saints for life!"
+	icon_state = "SaintUniform"
+	item_state = "SaintUniform"
+	can_adjust = FALSE

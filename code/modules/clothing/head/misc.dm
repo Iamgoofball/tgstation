@@ -514,3 +514,8 @@
 	icon_state = "JackFrostHat"
 	item_state = "JackFrostHat"
 
+/obj/item/clothing/head/saints
+	name = "feather hat"
+	desc = "Did you know that seventy five percent of greyshirts suffer from some kind of hearing loss? This alarming statistic means that more likely than not, talking isn't the most effective way to communicate with a greyshirt. That's when you have to hit them."
+	icon_state = "saintHat"
+	item_state = "saintHat"
